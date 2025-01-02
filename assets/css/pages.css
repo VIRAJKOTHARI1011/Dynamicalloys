@@ -1,0 +1,321 @@
+:root {
+    --default-font: "Roboto",  system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    --heading-font: "Montserrat",  sans-serif;
+    --nav-font: "Poppins",  sans-serif;
+  }
+  
+  /* Global Colors - The following color variables are used throughout the website. Updating them here will change the color scheme of the entire website */
+  :root { 
+    --background-color: #ffffff; /* Background color for the entire website, including individual sections */
+    --default-color: #222222; /* Default color used for the majority of the text content across the entire website */
+    --heading-color: #172a28; /* Color for headings, subheadings and title throughout the website */
+    --accent-color: #008374; /* Accent color that represents your brand on the website. It's used for buttons, links, and other elements that need to stand out */
+    --surface-color: #ffffff; /* The surface color is used as a background of boxed elements within sections, such as cards, icon boxes, or other elements that require a visual separation from the global background. */
+    --contrast-color: #ffffff; /* Contrast color for text, ensuring readability against backgrounds of accent, heading, or default colors. */
+  }
+  
+  /* Nav Menu Colors - The following color variables are used specifically for the navigation menu. They are separate from the global colors to allow for more customization options */
+  :root {
+    --nav-color: #ffffff;  /* The default color of the main navmenu links */
+    --nav-hover-color: #008374; /* Applied to main navmenu links when they are hovered over or active */
+    --nav-mobile-background-color: #ffffff; /* Used as the background color for mobile navigation menu */
+    --nav-dropdown-background-color: #ffffff; /* Used as the background color for dropdown items that appear when hovering over primary navigation items */
+    --nav-dropdown-color: #01433c; /* Used for navigation links of the dropdown items in the navigation menu. */
+    --nav-dropdown-hover-color: #008374; /* Similar to --nav-hover-color, this color is applied to dropdown navigation links when they are hovered over. */
+  }
+  
+  /* Color Presets - These classes override global colors when applied to any section or element, providing reuse of the sam color scheme. */
+  
+  .light-background {
+    --background-color: #f2f9f9;
+    --surface-color: #ffffff;
+  }
+  
+  .dark-background {
+    --background-color: #060606;
+    --default-color: #ffffff;
+    --heading-color: #ffffff;
+    --surface-color: #252525;
+    --contrast-color: #ffffff;
+  }
+  
+  .accent-background {
+    --background-color: #008374;
+    --default-color: #ffffff;
+    --heading-color: #ffffff;
+    --accent-color: #ffffff;
+    --surface-color: #00b6a1;
+    --contrast-color: #ffffff;
+  }
+  
+  /* Smooth scroll */
+  :root {
+    scroll-behavior: smooth;
+  }
+  
+  /*--------------------------------------------------------------
+  # General Styling & Shared Classes
+  --------------------------------------------------------------*/
+  body {
+    color: var(--default-color);
+    background-color: var(--background-color);
+    font-family: var(--default-font);
+  }
+  
+  a {
+    color: var(--accent-color);
+    text-decoration: none;
+    transition: 0.3s;
+  }
+  
+  a:hover {
+    color: color-mix(in srgb, var(--accent-color), transparent 25%);
+    text-decoration: none;
+  }
+  
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    color: var(--heading-color);
+    font-family: var(--heading-font);
+  }
+  .container {
+    width: 90%;
+    margin: 0 auto;
+    max-width: 1200px;
+  }
+  
+  /* About Us Section */
+/* Image Hover Effect */
+.img-fluid:hover {
+    transform: scale(1.05);
+    transition: transform 0.3s ease;
+  }
+  
+  /* Gear Icon Background Hover */
+  .position-absolute:hover {
+    background-color: #ff6f61;
+    transition: background-color 0.3s ease;
+  }
+  .icon-circle {
+    width: 70px;
+    height: 70px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+  }
+  .grayscale {
+    filter: grayscale(100%);
+    transition: filter 0.3s ease-in-out;
+  }
+
+  .grayscale.hover-restore:hover {
+    filter: grayscale(0%);
+  }
+  /* Mobile Styles */
+  @media (max-width: 768px) {
+    .feature {
+      width: 100%;
+      margin-bottom: 20px;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .about-us h1 {
+      font-size: 2rem;
+    }
+  
+    .about-us p {
+      font-size: 1rem;
+    }
+  
+    .feature {
+      width: 100%;
+    }
+  
+    .about-image img {
+      width: 90%;
+    }
+  }
+
+
+  /* QUALITY CSS */
+  .hero-section {
+    background: url('../img/quality-policy.jpg') no-repeat center center/cover;
+    color: #fff;
+    text-align: center;
+    padding: 100px 20px;
+  }
+  .hero-section h1{
+    color: #fff;
+  }
+    .hero-section p {
+        color: #fff;
+        font-size: 20px;
+    }
+    .quality-statement p {
+        text-align: justify; /* Justify text */
+        line-height: 1.6; /* Set line height */
+        word-spacing: 0.1em; /* Set word spacing */
+    }
+   
+
+    /* Mobile Styles */
+    @media (max-width: 768px) {row
+        .hero-section {
+            padding: 40px 0; /* Reduce padding for mobile */
+        }
+        .hero-section h1 {
+            font-size: 2.5rem; /* Adjust font size for mobile */
+        }
+        .hero-section p {
+            font-size: 1.2rem; /* Adjust font size for mobile */
+        }
+        .quality-statement p {
+            font-size: 0.9rem; /* Adjust font size for quality statement */
+        }
+    }
+
+    @media (max-width: 576px) {
+        .hero-section h1 {
+            font-size: 2rem; /* Further reduce font size for smaller devices */
+        }
+        .hero-section p {
+            font-size: 1rem; /* Further reduce font size for smaller devices */
+        }
+        .quality-statement p {
+            font-size: 0.85rem; /* Further reduce font size for quality statement */
+        }
+    }
+/* BLOG CSS  */
+
+.blog-container {
+  background: #f9f9f9;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  margin-top: 20px;
+}
+
+.blog-title {
+  text-align: center;
+  font-size: 1.8rem;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.featured-thumbnail img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  margin-bottom: 20px;
+}
+
+.blog-description {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #555;
+}
+
+ /* Sidebar Container */
+ .quick-links {
+  background: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  margin-bottom: 20px;
+}
+
+/* Sidebar Title */
+.quick-links h4 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+}
+
+/* Sidebar List */
+.quick-links ul {
+  list-style: none;
+  padding: 0;
+}
+
+.quick-links ul li {
+  margin-bottom: 15px;
+}
+
+/* Sidebar Links */
+.quick-links ul li a {
+  display: block;
+  padding: 10px 15px;
+  font-size: 1rem;
+  color: #444;
+  background: #f8f9fa;
+  text-decoration: none;
+  border-radius: 8px;
+  transition: all 0.3s ease-in-out;
+}
+
+/* Hover Effect for Links */
+.quick-links ul li a:hover {
+  color: #fff;
+  background: #007bff;
+  box-shadow: 0 4px 8px rgba(0, 123, 255, 0.4);
+  transform: translateX(5px);
+}
+
+/* Active Link Effect */
+.quick-links ul li a.active {
+  background: #007bff;
+  color: #fff;
+}
+  .share-btns a {
+      font-size: 1.2rem;
+  }
+  @media (max-width: 768px) {
+    .quick-links h4 {
+        font-size: 1.25rem;
+        text-align: center;
+    }
+
+    .quick-links ul li a {
+        font-size: 0.9rem;
+        padding: 8px 10px;
+    }
+  } 
+
+
+  @media (max-width: 576px) {
+    .quick-links {
+        padding: 15px;
+    }
+
+    .quick-links ul li a {
+        padding: 8px;
+        font-size: 0.85rem;
+    }
+
+}
+
+
+/*  PIPES AND TUBES CSS */
+.hero-section {
+  background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('/assets/img/col-bgimage-1.jpg');
+  background-size: cover;
+  color: white;
+  text-align: center;
+  padding: 110px 20px;
+}
+.hero-section h1{
+  padding: 30px;
+}
+.table-container {
+  max-height: 400px;
+  overflow-y: auto;
+}
