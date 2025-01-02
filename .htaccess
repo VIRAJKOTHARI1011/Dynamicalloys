@@ -1,5 +1,8 @@
-# Enable mod_rewrite
 RewriteEngine on
+
+# Log rewrite process (for debugging)
+RewriteLog "/path/to/rewrite.log"
+RewriteLogLevel 3
 
 # Check if the request is NOT for a directory
 RewriteCond %{REQUEST_FILENAME} !-d
