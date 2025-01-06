@@ -168,6 +168,70 @@
         font-size: 0.85rem;
     }
 }
+        /* Base responsive adjustments for iPhone 15 and similar devices */
+@media screen and (max-width: 430px) {
+    /* Adjust the main container for calculators or forms */
+    .calculator, .results {
+        max-width: 90%; /* Reduce width slightly for better fit */
+        margin: 10px auto;
+        padding: 15px; /* Adjust padding */
+        border-radius: 10px; /* Keep modern rounded edges */
+    }
+
+    /* Text and headings */
+    h1, h2 {
+        font-size: 1.6rem; /* Scaled for smaller screens */
+    }
+
+    label {
+        font-size: 1.1rem;
+    }
+
+    select, input {
+        font-size: 1rem;
+        padding: 10px; /* Increase padding for better usability */
+    }
+
+    /* Buttons */
+    button {
+        font-size: 1rem;
+        padding: 12px 18px; /* Balanced padding for readability */
+        margin-bottom: 10px; /* Add spacing between stacked buttons */
+    }
+
+    .btn-container {
+        flex-direction: column; /* Stack buttons vertically */
+        gap: 15px;
+    }
+}
+
+/* Special adjustments for iPhone 15 Plus and Pro Max (wider screens) */
+@media screen and (max-width: 430px) and (min-width: 391px) {
+    .calculator, .results {
+        max-width: 95%; /* Slightly larger for wider devices */
+    }
+
+    button {
+        padding: 14px 20px; /* Slightly larger buttons for Plus/Pro Max */
+    }
+}
+
+/* Special adjustments for smaller iPhone 15 (base model, 390px) */
+@media screen and (max-width: 390px) {
+    .calculator, .results {
+        padding: 10px; /* Further reduced padding */
+    }
+
+    h1, h2 {
+        font-size: 1.4rem;
+    }
+
+    button {
+        padding: 10px 15px; /* Smaller buttons */
+        font-size: 0.9rem;
+    }
+}
+
 
     </style>
 </head>
