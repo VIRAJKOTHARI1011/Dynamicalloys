@@ -169,52 +169,48 @@
     }
 }
         /* Base responsive adjustments for iPhone 15 and similar devices */
+/* Base styles for mobile devices */
 @media screen and (max-width: 430px) {
-    /* Adjust the main container for calculators or forms */
+    /* Stack the calculator box above the results box */
     .calculator, .results {
-        max-width: 90%; /* Reduce width slightly for better fit */
-        margin: 10px auto;
-        padding: 15px; /* Adjust padding */
-        border-radius: 10px; /* Keep modern rounded edges */
+        display: block; /* Ensure both are block-level elements */
+        width: 100%; /* Full width on mobile */
+        max-width: 90%; /* Add some breathing space */
+        margin: 10px auto; /* Center the boxes */
+        padding: 15px; /* Add inner spacing */
+        border-radius: 10px; /* Rounded corners for a sleek look */
     }
 
-    /* Text and headings */
+    /* Adjust calculator and results stacking */
+    .calculator {
+        order: 1; /* Ensure calculator is always on top */
+    }
+
+    .results {
+        order: 2; /* Ensure results are always below */
+    }
+
+    /* Additional adjustments for buttons and text */
+    button {
+        display: block;
+        width: 100%; /* Full-width buttons for mobile */
+        padding: 12px;
+        margin-bottom: 10px;
+        font-size: 1rem;
+    }
+
     h1, h2 {
-        font-size: 1.6rem; /* Scaled for smaller screens */
+        font-size: 1.5rem; /* Adjust heading size */
+        text-align: center;
     }
 
-    label {
-        font-size: 1.1rem;
-    }
-
-    select, input {
+    label, select, input {
         font-size: 1rem;
-        padding: 10px; /* Increase padding for better usability */
-    }
-
-    /* Buttons */
-    button {
-        font-size: 1rem;
-        padding: 12px 18px; /* Balanced padding for readability */
-        margin-bottom: 10px; /* Add spacing between stacked buttons */
-    }
-
-    .btn-container {
-        flex-direction: column; /* Stack buttons vertically */
-        gap: 15px;
+        width: 100%; /* Full width for inputs */
+        margin-bottom: 10px;
     }
 }
 
-/* Special adjustments for iPhone 15 Plus and Pro Max (wider screens) */
-@media screen and (max-width: 430px) and (min-width: 391px) {
-    .calculator, .results {
-        max-width: 95%; /* Slightly larger for wider devices */
-    }
-
-    button {
-        padding: 14px 20px; /* Slightly larger buttons for Plus/Pro Max */
-    }
-}
 
 /* Special adjustments for smaller iPhone 15 (base model, 390px) */
 @media screen and (max-width: 390px) {
